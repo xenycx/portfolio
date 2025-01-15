@@ -14,14 +14,19 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "xenycx",
   description: "ლინკების ჯოჯოხეთი",
   keywords: ["portfolio", "developer", "projects"],
-  viewport: "width=device-width, initial-scale=1",
   robots: "index, follow",
-  themeColor: "#ADD8E6"
 };
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
+export const themeColor = "#ADD8E6";
 
 export default function RootLayout({
   children,
@@ -38,7 +43,7 @@ export default function RootLayout({
         <meta property="og:title" content="Aleksandre Dokhnadze | xenycx | Portfolio" />
         <meta name="description" content="!" />
         <meta name="author" content="xenycx" />
-        <link rel="icon" href="./public/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
