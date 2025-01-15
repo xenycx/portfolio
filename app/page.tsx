@@ -117,6 +117,8 @@ function SocialButton({
     <Link 
       href={href}
       className="group flex items-center justify-center w-10 h-10 rounded-lg bg-[#050505] backdrop-blur-md transition-all hover:bg-zinc-900/50 border border-[#1c1c1c] hover:border-zinc-800 text-[#7f7f7f]"
+      target="_blank"
+      rel="noopener noreferrer"
       {...props}
     >
       {children}
