@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  background-color: black;
+  color: white;
+}
+
+::selection {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Add a subtle gradient to the background */
+.bg-black {
+  background: linear-gradient(to bottom right, #000000, #0a0a0a);
+}
+
+/* Add animation for the cards and buttons */
+.group {
+  transition: all 0.3s ease;
+}
+
+.group:hover {
+  transform: translateY(-2px);
+}
+

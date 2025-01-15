@@ -1,101 +1,126 @@
-import Image from "next/image";
+import { Github, Music2, Disc3, Instagram, Film, Youtube, Facebook, MessagesSquare, ExternalLink } from 'lucide-react'
+import Link from "next/link"
 
-export default function Home() {
+export default function Page() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="min-h-screen bg-black text-white font-mono flex items-center justify-center">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12 lg:gap-24 xl:gap-52 items-center">
+          {/* Left Column */}
+          <div className="space-y-4 max-w-sm">
+            <h1 className="text-2xl md:text-3xl font-medium flex items-center gap-2">
+              👋 hello, i&apos;m xenycx
+            </h1>
+            <div className="text-[#7f7f7f] space-y-3 text-lg">
+              <p>⭐ hopeless developer whose knowledge is never enough.</p>
+              <p>i&apos;m also a many things...</p>
+            </div>
+            <div className="flex gap-2 flex-wrap">
+              <SocialButton href="https://www.instagram.com/xenycx/" aria-label="Instagram">
+                <Instagram className="w-5 h-5" />
+              </SocialButton>
+              <SocialButton href="https://open.spotify.com/user/8rf9w8f04i47g0d446k7bu4z8?nd=1&dlsi=ce9c59e7b5904ed6" aria-label="Spotify">
+                <Disc3 className="w-5 h-5" />
+              </SocialButton>
+              <SocialButton href="https://letterboxd.com/xenycx/films" aria-label="Letterboxd">
+                <Film className="w-5 h-5" />
+              </SocialButton>
+              <SocialButton href="https://www.tiktok.com/@xenycx" aria-label="Tiktok">
+                <Music2 className="w-5 h-5" />
+              </SocialButton>
+              <SocialButton href="https://github.com/xenycx" aria-label="GitHub">
+                <Github className="w-5 h-5" />
+              </SocialButton>
+              <SocialButton href="https://www.youtube.com/@xenycx" aria-label="YouTube">
+                <Youtube className="w-5 h-5" />
+              </SocialButton>
+              <SocialButton href="https://discord.com/users/536115838969839626" aria-label="Discord">
+                <MessagesSquare className="w-5 h-5" />
+              </SocialButton>
+              <SocialButton href="https://www.facebook.com/xenycx" aria-label="Facebook">
+                <Facebook className="w-5 h-5" />
+              </SocialButton>
+            </div>
+          </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+          {/* Right Column */}
+          <div className="space-y-4 w-full h-full flex flex-col">
+            <ProjectCard
+              icon="⚡"
+              title="blinko"
+              url="my.xenyc.ge"
+              description="safe, open, and privacy-respecting note-taking web app. used only by me currently but feel free to register and use it."
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <ProjectCard
+              icon="✨"
+              title="forum"
+              url="forum.xenyc.ge"
+              description="georgian community forum, this one is just for fun i selfhosted flraum and experimented for a while, in feature i plan to rework and customize the whole forum."
+            />
+            <ProjectCard
+              icon="🔏"
+              title="Database"
+              url="dbase.xenyc.ge"
+              description="easly access private information of gtu students with this database from testing.gtu.ge, including students, and teachers (not all of them)."
+            />
+            
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
     </div>
-  );
+  )
 }
+
+function ProjectCard({ 
+  icon, 
+  title, 
+  url, 
+  description
+}: { 
+  icon: string
+  title: string
+  url: string
+  description: string 
+}) {
+  return (
+    <div className="relative">
+      <div className="rounded-[14px] bg-[#050505] p-5 border-2 border-[#1c1c1c] block w-full flex flex-col gap-3">
+        <Link 
+          href={`https://${url}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group flex items-center gap-3 bg-[#050505] hover:bg-[#1c1c1c] transition-colors p-2 rounded-lg w-[200px]"
+        >
+          <div className="rounded-lg border-2 border-[#1c1c1c] w-10 h-10 flex items-center justify-center shrink-0 transition-colors group-hover:border-[#303030]">
+            <span className="text-2xl">{icon}</span>
+          </div>
+          <div className="flex flex-col gap-0.5">
+          <h2 className="font-medium text-[#e1e1e1] text-lg md:text-xl lg:text-2xl">{title}</h2>
+            <div className="flex items-center gap-1 text-sm text-[#7f7f7f]">
+            <ExternalLink className="w-2 h-2 md:w-3 md:h-3 lg:w-4 lg:h-4" />
+              <span>{url}</span>
+            </div>
+          </div>
+        </Link>
+        <p className="text-sm md:text-base lg:text-lg text-[#7f7f7f] font-mono">{description}</p>
+      </div>
+    </div>
+  )
+}
+
+function SocialButton({ 
+  children, 
+  href, 
+  ...props 
+}: React.ComponentPropsWithoutRef<typeof Link>) {
+  return (
+    <Link 
+      href={href}
+      className="group flex items-center justify-center w-10 h-10 rounded-lg bg-[#050505] backdrop-blur-md transition-all hover:bg-zinc-900/50 border border-[#1c1c1c] hover:border-zinc-800 text-[#7f7f7f]"
+      {...props}
+    >
+      {children}
+    </Link>
+  )
+}
+
