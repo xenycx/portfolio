@@ -14,21 +14,25 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Aleksandre Dokhnadze | xenycx | Portfolio",
+  title: "xenycx | Portfolio",
   description: "View Alesandre Dokhnadze’s Portfolio.",
   keywords: "portfolio, developer, projects",
   author: "xenycx",
   openGraph: {
     siteName: "ლინკების ჯოჯოხეთი",
-    image: "https://avatars3.githubusercontent.com/u/50420166?s=300",
+    images: [
+      {
+        url: "https://avatars.githubusercontent.com/u/50420166?s=300",
+        width: 300,
+        height: 300,
+        alt: "xenycx Avatar",
+      },
+    ],
     description: "View Alesandre Dokhnadze’s Portfolio.",
-    title: "Aleksandre Dokhnadze | xenycx | Portfolio",
+    title: "xenycx | Portfolio",
   },
   icons: {
-    icon: "/favicon.ico",
-    appleTouchIcon: "/apple-touch-icon.png",
-    icon32: "/favicon-32x32.png",
-    icon16: "/favicon-16x16.png",
+    icon: "/public/favicon.ico",
   },
   manifest: "/site.webmanifest",
 };
