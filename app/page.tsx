@@ -84,7 +84,7 @@ function ProjectCard({
 }) {
   return (
     <div className="relative">
-      <div className="rounded-[14px] bg-[#050505] p-5 border-2 border-[#1c1c1c] block w-full flex flex-col gap-3">
+      <div className="rounded-[14px] bg-[#050505] p-5 border-2 border-[#1c1c1c] w-full flex flex-col gap-3">
         <Link 
           href={`https://${url}`}
           target="_blank"
