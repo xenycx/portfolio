@@ -1,7 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import Script from "next/script";
-import Head from "next/head";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -15,11 +14,23 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "xenycx",
-  description: "ლინკების ჯოჯოხეთი",
-  keywords: ["portfolio", "developer", "projects"],
-  robots: "index, follow",
-  viewport: "width=device-width, initial-scale=1",
+  title: "Aleksandre Dokhnadze | xenycx | Portfolio",
+  description: "View Alesandre Dokhnadze’s Portfolio.",
+  keywords: "portfolio, developer, projects",
+  author: "xenycx",
+  openGraph: {
+    siteName: "ლინკების ჯოჯოხეთი",
+    image: "https://avatars3.githubusercontent.com/u/50420166?s=300",
+    description: "View Alesandre Dokhnadze’s Portfolio.",
+    title: "Aleksandre Dokhnadze | xenycx | Portfolio",
+  },
+  icons: {
+    icon: "/favicon.ico",
+    appleTouchIcon: "/apple-touch-icon.png",
+    icon32: "/favicon-32x32.png",
+    icon16: "/favicon-16x16.png",
+  },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
@@ -29,21 +40,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <meta charSet="utf-8" />
-        <meta property="og:site_name" content="ლინკების ჯოჯოხეთი" />
-        <meta property="og:image" content="https://avatars3.githubusercontent.com/u/50420166?s=300" />
-        <meta property="og:description" content="View Alesandre Dokhnadze’s Portfolio." />
-        <meta property="og:title" content="Aleksandre Dokhnadze | xenycx | Portfolio" />
-        <meta name="description" content="!" />
-        <meta name="author" content="xenycx" />
-        <meta name="theme-color" content="#ADD8E6" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-      </Head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-F1MLQC4TK3" />
