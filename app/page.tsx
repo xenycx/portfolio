@@ -59,9 +59,9 @@ export default function Page() {
             />
             <ProjectCard
               icon="🔏"
-              title="Database"
-              url="dbase.xenyc.ge"
-              description="easly access private information of gtu students with this database from testing.gtu.ge, including students, and teachers (not all of them)."
+              title="tlat"
+              url="github.com/xenycx/Sakurso"
+              description="java spring boot web app teacher's lecture attendance tracker to control the lecutre sessions and attendance, start/stop letures based on the room ip. with admins and lecture permissions, using bootstrap5 and thymeleaf."
             />
             
           </div>
