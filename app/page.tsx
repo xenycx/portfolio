@@ -60,8 +60,8 @@ export default function Page() {
             <ProjectCard
               icon="🔏"
               title="tlat"
-              url="github.com/xenycx/Sakurso"
-              description="java spring boot web app teacher's lecture attendance tracker to control the lecutre sessions and attendance, start/stop letures based on the room ip. with admins and lecture permissions, using bootstrap5 and thymeleaf."
+              url="l.xenyc.ge/7"
+              description="web app teacher's lecture attendance tracker to control the lecutre sessions and attendance, using bootstrap5 and thymeleaf."
             />
             
           </div>
