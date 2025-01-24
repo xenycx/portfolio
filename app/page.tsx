@@ -49,19 +49,19 @@ export default function Page() {
               icon="⚡"
               title="blinko"
               url="my.xenyc.ge"
-              description="safe, open, and privacy-respecting note-taking web app. used only by me currently but feel free to register and use it."
+              description="a safe, open, and privacy-respecting note-taking web app. currently used only by me, but feel free to register and use it."
             />
             <ProjectCard
-              icon="✨"
-              title="forum"
-              url="forum.xenyc.ge"
-              description="georgian community forum, this one is just for fun i selfhosted flraum and experimented for a while, in feature i plan to rework and customize the whole forum."
-            />
-            <ProjectCard
-              icon="📚"
+              icon="📖"
               title="books"
               url="books.xenyc.ge"
-              description="just a small side project of using biblusi's api and and building similar webapp for books."
+              description="an online book shop where you can view stock counts, authors' information, and explore books using biblusi's api."
+            />
+            <ProjectCard
+              icon="🔏"
+              title="tlat"
+              url="l.xenyc.ge/7"
+              description="tlat (teacher's lecture attendance tracker) is a spring boot app for monitoring university lectures, tracking lecture progress, and verifying lecturer attendance."
             />
             
           </div>
