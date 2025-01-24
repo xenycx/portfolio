@@ -58,7 +58,7 @@ export default function Page() {
               description="georgian community forum, this one is just for fun i selfhosted flraum and experimented for a while, in feature i plan to rework and customize the whole forum."
             />
             <ProjectCard
-              icon="🔏"
+              icon="📚"
               title="books"
               url="books.xenyc.ge"
               description="just a small side project of using biblusi's api and and building similar webapp for books."
