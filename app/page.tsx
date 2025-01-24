@@ -59,9 +59,9 @@ export default function Page() {
             />
             <ProjectCard
               icon="🔏"
-              title="tlat"
-              url="l.xenyc.ge/7"
-              description="web app teacher's lecture attendance tracker to control the lecutre sessions and attendance, using bootstrap5 and thymeleaf."
+              title="books"
+              url="books.xenyc.ge"
+              description="just a small side project of using biblusi's api and and building similar webapp for books."
             />
             
           </div>
